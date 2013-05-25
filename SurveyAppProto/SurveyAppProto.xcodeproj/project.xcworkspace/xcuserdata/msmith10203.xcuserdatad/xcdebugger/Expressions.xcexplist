@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[TableViewController tableView:titleForHeaderInSection:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[headers objectAtIndex: 3]">
+            </PersistentString>
+            <PersistentString
+               value = "applicationDelegate.questionNumber">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TableViewController initWithStyle:initWithTitle:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "title">
+            </PersistentString>
+            <PersistentString
+               value = "[applicationDelegate.names indexOfObject: title]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

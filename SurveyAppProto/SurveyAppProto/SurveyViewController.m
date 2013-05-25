@@ -35,7 +35,7 @@
      
         if ([applicationDelegate.names indexOfObject: title] < applicationDelegate.names.count-1) {
             self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-                                                      initWithTitle: @"Go East"
+                                                      initWithTitle: @"Question 1"
                                                       style: UIBarButtonItemStylePlain
                                                       target: [UIApplication sharedApplication].delegate
                                                       action: @selector(nextStation)
@@ -45,17 +45,12 @@
     return self;
 }
 
+/*
 -(void) moreInfo {
     SurveyAppDelegate *applicationDelegate = [UIApplication sharedApplication].delegate;
     
     NSString *information = [applicationDelegate.information objectForKey:self.title];
     
-/*
-    InfoViewController *infoController = [[InfoViewController alloc]
-                                      initWithTitle: self.title
-                                      information: information];
-*/
-
     TableViewController *infoController = [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped];
 
     UINavigationController *navigationController =
@@ -64,7 +59,8 @@
  
     [self presentModalViewController:navigationController animated:YES];
 }
-
+*/
+ 
 - (void)viewDidLoad
 {
     [super viewDidLoad];

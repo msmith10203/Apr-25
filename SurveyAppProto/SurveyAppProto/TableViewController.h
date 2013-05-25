@@ -12,6 +12,7 @@
     NSArray *headers;
     NSArray *states;
     NSString *title;
+    UILabel *label;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style initWithTitle:(NSString *) title;

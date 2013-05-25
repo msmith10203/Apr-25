@@ -18,34 +18,22 @@
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions
 {
 	// Override point for customization after application launch
-	names = [NSArray arrayWithObjects:
-             @"8th Avenue",
-             @"6th Avenue",
-             @"Union Square",
-             @"3rd Avenue",
-             @"1st Avenue",
-             @"Bedford Avenue",
-             nil
-             ];
     
-	information = [NSDictionary dictionaryWithObjectsAndKeys:
-                   @"Transfer for A, C, E.",                 @"8th Avenue",
-                   @"Transfer for F, M, 1, 2, 3.",           @"6th Avenue",
-                   @"Transfer for N, Q, R, 4, 5, 6.",        @"Union Square",
-                   @"No transfers.",                         @"3rd Avenue",
-                   @"First Avenue has an uptown bike lane.", @"1st Avenue",
-                   @"Only the dead know Brooklyn.",		  @"Bedford Avenue",
-                   nil
-                   ];
-    
-/*
-	SurveyViewController *firstController =
-    [[SurveyViewController alloc] initWithTitle: [names objectAtIndex: 0]];
-*/
+    names = [NSArray arrayWithObjects:
+             @"Question 1",
+             @"Question 2",
+             @"Question 3",
+             @"Question 4",
+             @"Question 5",
+             @"Question 6",
+             nil];
 
     TableViewController *firstController =
-    [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped initWithTitle:@"Go East"];
+    [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped
+                                 initWithTitle:@"Question 1"];
 
+    questionNumber = 0;
+    
 	self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
 	// Override point for customization after application launch.
     
@@ -54,6 +42,8 @@
     
 	visited = [NSMutableArray arrayWithObject: firstController];
 	[self.window makeKeyAndVisible];
+    
+    
 	return YES;
 }
 
@@ -68,10 +58,8 @@
 	}
     
 	if (visited.count <= i) {
-		//This station is being visited for the first time.
-		[visited addObject:
-         [[SurveyViewController alloc] initWithTitle: [names objectAtIndex: i]]
-         ];
+        [ visited addObject: [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped initWithTitle: [names objectAtIndex: i]]];
+
 	}
     
 	[navigationController pushViewController: [visited objectAtIndex: i] animated: YES];

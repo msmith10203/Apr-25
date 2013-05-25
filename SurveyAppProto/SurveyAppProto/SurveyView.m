@@ -11,17 +11,6 @@
 
 @implementation SurveyView
 
-/*
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-*/
-
 - (id) initWithFrame: (CGRect) frame controller: (SurveyViewController *) surveyViewController {
     self = [super initWithFrame:frame];
     if(self){
@@ -46,11 +35,6 @@
          ];
         
         [self addSubview:button];
-
-/*
-        TableViewController *infoController = [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped];
-        [self addSubview:infoController];
-*/
         
     }
     return self;

@@ -11,17 +11,6 @@
 
 @implementation InfoViewController
 
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
 -(id) initWithTitle: (NSString *) title information: (NSString *) i {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {

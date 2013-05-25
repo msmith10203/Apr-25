@@ -21,94 +21,82 @@
     if (self) {
         // Custom initialization
         //An array of five strings.
+
 		headers = [NSArray arrayWithObjects:
-                   @"EST: Eastern Standard Time",
-                   @"CST: Central Standard Time",
-                   @"MST: Mountain Standard Time",
-                   @"PST: Pacific Standard Time",
-                   @"\nMiscellaneous",	//The \n (newline) skips an extra line.
+                   @"Our vision/mission excites and motivates me to commit extra time and effort to the company.",
+                   @"Before the Merger",
+                   @"After the Merger",
+                   @"Add Comments",
                    nil
                    ];
-        
+
+/*
+		headers =
+            [NSArray arrayWithObjects:
+                [NSArray arrayWithObjects:
+                    @"Our vision/mission excites and motivates me to commit extra time and effort to the company.",
+                    @"Before the Merger",
+                    @"After the Merger",
+                    @"Add Comments",
+                    nil
+                 ],
+            [NSArray arrayWithObjects:
+                    @"I know what made us better or unique in our market.",
+                    @"Before the Merger",
+                    @"After the Merger",
+                    @"Add Comments",
+                    nil
+                 ],
+             [NSArray arrayWithObjects:
+                    @"I know how my job contributes to achieving our vision/mission.",
+                    @"Before the Merger",
+                    @"After the Merger",
+                    @"Add Comments",
+                    nil
+                ],
+             [NSArray arrayWithObjects:
+                @"I know our game plan is to win.",
+                @"Before the Merger",
+                @"After the Merger",
+                @"Add Comments",
+                nil
+                ],
+            nil
+        ];
+*/
 		//An array of five arrays (Miyamoto Musashi).
 		states =
             [NSArray arrayWithObjects:
-                  
-                  //EST: Eastern Standard Time
+                  //question
                   [NSArray arrayWithObjects:
-                   @"Alabama",
-                   @"Connecticut",
-                   @"Delaware",
-                   @"Florida",
-                   @"Georgia",
-                   @"Indiana",
-                   @"Kentucky",
-                   @"Maine",
-                   @"Maryland",
-                   @"Massachusetts",
-                   @"Michigan",
-                   @"New Hampshire",
-                   @"New Jersey",
-                   @"New York",
-                   @"North Carolina",
-                   @"Ohio",
-                   @"Pennsylvania",
-                   @"Rhode Island",
-                   @"South Carolina",
-                   @"Tennessee",
-                   @"Vermont",
-                   @"Virginia",
-                   @"West Virginia",
                    nil
                    ],
                   
                   //CST: Central Standard Time
                   [NSArray arrayWithObjects:
-                   @"Arkansas",
-                   @"Illinois",
-                   @"Iowa",
-                   @"Kansas",
-                   @"Louisiana",
-                   @"Minnesota",
-                   @"Mississippi",
-                   @"Missouri",
-                   @"Nebraska",
-                   @"North Dakota",
-                   @"Oklahoma",
-                   @"South Dakota",
-                   @"Texas",
-                   @"Wisconsin",
+                   @"Strongly Disagree",
+                   @"Disagree",
+                   @"Neutral",
+                   @"Agree",
+                   @"Strongly Agree",
                    nil
                    ],
-                  
+             
                   //MST: Mountain Standard Time
                   [NSArray arrayWithObjects:
-                   @"Arizona",
-                   @"Colorado",
-                   @"Idaho",
-                   @"Montana",
-                   @"New Mexico",
-                   @"Utah",
-                   @"Wyoming",
+                   @"Strongly Disagree",
+                   @"Disagree",
+                   @"Neutral",
+                   @"Agree",
+                   @"Strongly Agree",
                    nil
                    ],
                   
                   //PST: Pacific Standard Time
                   [NSArray arrayWithObjects:
-                   @"California",
-                   @"Nevada",
-                   @"Oregon",
-                   @"Washington",
                    nil
                    ],
-                  
-                  //Miscellaneous
-                  [NSArray arrayWithObjects:
-                   @"Alaska",
-                   @"Hawaii",
-                   nil
-                   ],
-                  
+                                    
              nil
              ];
         
@@ -119,7 +107,7 @@
             
             if ([applicationDelegate.names indexOfObject: title] < applicationDelegate.names.count-1) {
                 self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-                                                          initWithTitle: @"Go East"
+                                                          initWithTitle: @"Next"
                                                           style: UIBarButtonItemStylePlain
                                                           target: [UIApplication sharedApplication].delegate
                                                           action: @selector(nextStation)
@@ -213,6 +201,15 @@
 }
 
 - (NSString *) tableView: (UITableView *) tableView titleForHeaderInSection: (NSInteger) section {
+    
+/*
+    NSArray *block = [headers objectAtIndex: section];
+    SurveyAppDelegate *applicationDelegate = [UIApplication sharedApplication].delegate;
+    
+	NSString *sectionText = [block objectAtIndex: applicationDelegate.questionNumber++];
+	return sectionText;
+*/
+    
 	return [headers objectAtIndex: section];
 }
 

@@ -13,6 +13,7 @@
 	NSDictionary *information;
 	NSMutableArray *visited;
 	UIWindow *_window;
+    NSUInteger questionNumber;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -20,4 +21,5 @@
 //StationController objects read these two properties:
 @property (strong, nonatomic) NSArray *names;
 @property (strong, nonatomic) NSDictionary *information;
+@property NSUInteger questionNumber;
 @end
