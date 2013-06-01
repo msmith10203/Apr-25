@@ -14,6 +14,7 @@
 @synthesize window=_window;
 @synthesize names;
 @synthesize information;
+@synthesize questionNumber;
 
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions
 {
@@ -24,8 +25,6 @@
              @"Question 2",
              @"Question 3",
              @"Question 4",
-             @"Question 5",
-             @"Question 6",
              nil];
 
     TableViewController *firstController =
@@ -43,7 +42,6 @@
 	visited = [NSMutableArray arrayWithObject: firstController];
 	[self.window makeKeyAndVisible];
     
-    
 	return YES;
 }
 
@@ -52,6 +50,9 @@
     (UINavigationController *)self.window.rootViewController;
     
 	NSUInteger i = navigationController.viewControllers.count;
+    
+    questionNumber = i;
+    
 	if (i == names.count) {
 		//We are currently visiting the last station, and can go no further.
 		return;

@@ -9,7 +9,7 @@
                value = "[headers objectAtIndex: 3]">
             </PersistentString>
             <PersistentString
-               value = "applicationDelegate.questionNumber">
+               value = "block[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

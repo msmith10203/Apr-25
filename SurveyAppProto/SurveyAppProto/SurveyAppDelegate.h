@@ -13,7 +13,7 @@
 	NSDictionary *information;
 	NSMutableArray *visited;
 	UIWindow *_window;
-    NSUInteger questionNumber;
+    NSUInteger _questionNumber;
 }
 
 @property (strong, nonatomic) UIWindow *window;

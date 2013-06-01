@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "SurveyAppDelegate.h"
+#import "SurveyView.h"
 
 @interface TableViewController ()
 
@@ -22,6 +23,7 @@
         // Custom initialization
         //An array of five strings.
 
+/*
 		headers = [NSArray arrayWithObjects:
                    @"Our vision/mission excites and motivates me to commit extra time and effort to the company.",
                    @"Before the Merger",
@@ -29,8 +31,8 @@
                    @"Add Comments",
                    nil
                    ];
+*/
 
-/*
 		headers =
             [NSArray arrayWithObjects:
                 [NSArray arrayWithObjects:
@@ -40,38 +42,64 @@
                     @"Add Comments",
                     nil
                  ],
-            [NSArray arrayWithObjects:
+                [NSArray arrayWithObjects:
                     @"I know what made us better or unique in our market.",
                     @"Before the Merger",
                     @"After the Merger",
                     @"Add Comments",
                     nil
                  ],
-             [NSArray arrayWithObjects:
+                [NSArray arrayWithObjects:
                     @"I know how my job contributes to achieving our vision/mission.",
                     @"Before the Merger",
                     @"After the Merger",
                     @"Add Comments",
                     nil
                 ],
-             [NSArray arrayWithObjects:
-                @"I know our game plan is to win.",
-                @"Before the Merger",
-                @"After the Merger",
-                @"Add Comments",
-                nil
+                [NSArray arrayWithObjects:
+                    @"I know our game plan is to win.",
+                    @"Before the Merger",
+                    @"After the Merger",
+                    @"Add Comments",
+                    nil
                 ],
-            nil
+                [NSArray arrayWithObjects:
+                    @"I know our game plan is to win.",
+                    @"Before the Merger",
+                    @"After the Merger",
+                    @"Add Comments",
+                    nil
+                ],
+             
+             nil
         ];
-*/
+
+        SurveyView *sv = [[SurveyView alloc] init];
+        
 		//An array of five arrays (Miyamoto Musashi).
 		states =
             [NSArray arrayWithObjects:
                   //question
-                  [NSArray arrayWithObjects:
-                   nil
-                   ],
-                  
+                //CST: Central Standard Time
+                [NSArray arrayWithObjects:
+                 //@"Strongly Disagree",
+                 //@"Disagree",
+                 //@"Neutral",
+                 //@"Agree",
+                 //@"Strongly Agree",
+                 nil
+                 ],
+             
+                //CST: Central Standard Time
+                [NSArray arrayWithObjects:
+                 @"Strongly Disagree",
+                 @"Disagree",
+                 @"Neutral",
+                 @"Agree",
+                 @"Strongly Agree",
+                 nil
+                 ],
+             
                   //CST: Central Standard Time
                   [NSArray arrayWithObjects:
                    @"Strongly Disagree",
@@ -84,19 +112,25 @@
              
                   //MST: Mountain Standard Time
                   [NSArray arrayWithObjects:
-                   @"Strongly Disagree",
-                   @"Disagree",
-                   @"Neutral",
-                   @"Agree",
-                   @"Strongly Agree",
+                   @"put the cmt box here",
+                   //@"Strongly Disagree",
+                   //@"Disagree",
+                   //@"Neutral",
+                   //@"Agree",
+                   //@"Strongly Agree",
                    nil
                    ],
                   
-                  //PST: Pacific Standard Time
-                  [NSArray arrayWithObjects:
-                   nil
-                   ],
-                                    
+                //MST: Mountain Standard Time
+                [NSArray arrayWithObjects:
+                 //@"Strongly Disagree",
+                 //@"Disagree",
+                 //@"Neutral",
+                 //@"Agree",
+                 //@"Strongly Agree",
+                 nil
+                 ],
+             
              nil
              ];
         
@@ -174,7 +208,8 @@
 - (NSInteger) numberOfSectionsInTableView: (UITableView *) tableView
 {
 	// Return the number of sections.
-	return states.count;
+    NSArray *sections = [headers objectAtIndex: 0];
+	return sections.count;
 }
 
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section
@@ -201,16 +236,20 @@
 }
 
 - (NSString *) tableView: (UITableView *) tableView titleForHeaderInSection: (NSInteger) section {
-    
-/*
-    NSArray *block = [headers objectAtIndex: section];
+  
     SurveyAppDelegate *applicationDelegate = [UIApplication sharedApplication].delegate;
-    
-	NSString *sectionText = [block objectAtIndex: applicationDelegate.questionNumber++];
+    NSArray *block = [headers objectAtIndex: applicationDelegate.questionNumber];
+    NSString *sectionText = [block objectAtIndex: section];
+    return sectionText;
+/*
+    NSArray *block = [headers objectAtIndex: section];    
+    SurveyAppDelegate *applicationDelegate = [UIApplication sharedApplication].delegate;
+	NSString *sectionText = [block objectAtIndex: applicationDelegate.questionNumber];
+    applicationDelegate.questionNumber++;
 	return sectionText;
 */
     
-	return [headers objectAtIndex: section];
+//	return [headers objectAtIndex: section];
 }
 
 
