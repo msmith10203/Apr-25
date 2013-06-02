@@ -13,6 +13,10 @@
     NSArray *states;
     NSString *title;
     UILabel *label;
+    
+	//The currenly selected cell (or nil) and its text field.
+	NSIndexPath *selected;
+	UITextView *textField;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style initWithTitle:(NSString *) title;

@@ -24,5 +24,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TableViewController tableView:didSelectRowAtIndexPath:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[headers objectAtIndex:r][s]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

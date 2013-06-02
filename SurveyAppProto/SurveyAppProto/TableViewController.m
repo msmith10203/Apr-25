@@ -23,16 +23,6 @@
         // Custom initialization
         //An array of five strings.
 
-/*
-		headers = [NSArray arrayWithObjects:
-                   @"Our vision/mission excites and motivates me to commit extra time and effort to the company.",
-                   @"Before the Merger",
-                   @"After the Merger",
-                   @"Add Comments",
-                   nil
-                   ];
-*/
-
 		headers =
             [NSArray arrayWithObjects:
                 [NSArray arrayWithObjects:
@@ -112,7 +102,7 @@
              
                   //MST: Mountain Standard Time
                   [NSArray arrayWithObjects:
-                   @"put the cmt box here",
+                   @"Enter Additional Comments Here",
                    //@"Strongly Disagree",
                    //@"Disagree",
                    //@"Neutral",
@@ -296,14 +286,52 @@
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
-	UITableViewCell *cell = [tableView cellForRowAtIndexPath: indexPath];
     
-	//Toggle the cell's checkmark.
-	if (cell.accessoryType == UITableViewCellAccessoryNone) {
-		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-	} else {
-		cell.accessoryType = UITableViewCellAccessoryNone;
-	}
+    int r = [indexPath row];
+    int s = [indexPath section];
+
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath: indexPath];
+    
+       if ([[headers objectAtIndex: r][s] isEqualToString:@"Add Comments"]) {
+        selected = indexPath;
+        
+        //Add a UITextField to the selected cell.
+        //The initial text of the text field must coincide with the text of the textLabel.
+        //UITableViewCell *cell = [tableView cellForRowAtIndexPath: indexPath];
+        UIFont *font = cell.textLabel.font;
+        CGFloat dy = (cell.contentView.bounds.size.height - font.lineHeight) / 2;
+        
+        CGRect frame = CGRectMake(
+                                  cell.textLabel.frame.origin.x,
+                                  cell.textLabel.frame.origin.y + dy,
+                                  cell.contentView.bounds.size.width,
+                                  cell.contentView.bounds.size.height - dy
+                                  );
+        
+        textField = [[UITextView alloc] initWithFrame: frame];
+        textField.delegate = self;
+        textField.backgroundColor = cell.textLabel.backgroundColor;
+        textField.textColor = cell.textLabel.textColor;
+        textField.text = cell.textLabel.text;
+        textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        cell.textLabel.text = @" ";
+        
+        textField.font = font;
+        textField.text = @" ";
+        textField.editable=YES;
+        
+        [cell.contentView addSubview: textField];
+        [textField becomeFirstResponder];   //show the keyboard
+        [tableView deselectRowAtIndexPath: indexPath animated: YES];
+    } else {
+        //Toggle the cell's checkmark.
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+    }
 }
 
 
