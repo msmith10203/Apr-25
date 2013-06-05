@@ -10,6 +10,7 @@
 		788680EE1739FEF30045C8CE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788680ED1739FEF30045C8CE /* TableViewController.m */; };
 		788A45DF175C38C200234BF7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 788A45DE175C38C200234BF7 /* Icon.png */; };
 		788A45E1175C38CA00234BF7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 788A45E0175C38CA00234BF7 /* Icon@2x.png */; };
+		788A45E9175C438800234BF7 /* IconLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 788A45E8175C438800234BF7 /* IconLaunch.png */; };
 		7890C91C1736943D00998D42 /* SurveyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7890C91B1736943D00998D42 /* SurveyView.m */; };
 		78C402DB1735EA52003372F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C402DA1735EA52003372F9 /* UIKit.framework */; };
 		78C402DD1735EA52003372F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C402DC1735EA52003372F9 /* Foundation.framework */; };
@@ -17,7 +18,6 @@
 		78C402E51735EA52003372F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78C402E31735EA52003372F9 /* InfoPlist.strings */; };
 		78C402E71735EA52003372F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C402E61735EA52003372F9 /* main.m */; };
 		78C402EB1735EA52003372F9 /* SurveyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C402EA1735EA52003372F9 /* SurveyAppDelegate.m */; };
-		78C402F11735EA52003372F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C402F01735EA52003372F9 /* Default-568h@2x.png */; };
 		78C402F9173601F8003372F9 /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C402F8173601F8003372F9 /* SurveyViewController.m */; };
 		78C402FC173609EA003372F9 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C402FB173609EA003372F9 /* InfoViewController.m */; };
 		78C402FF17360E2E003372F9 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C402FE17360E2E003372F9 /* InfoView.m */; };
@@ -28,6 +28,7 @@
 		788680ED1739FEF30045C8CE /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		788A45DE175C38C200234BF7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		788A45E0175C38CA00234BF7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		788A45E8175C438800234BF7 /* IconLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconLaunch.png; sourceTree = "<group>"; };
 		7890C91A1736943D00998D42 /* SurveyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyView.h; sourceTree = "<group>"; };
 		7890C91B1736943D00998D42 /* SurveyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyView.m; sourceTree = "<group>"; };
 		78C402D71735EA52003372F9 /* SurveyAppProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyAppProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +41,6 @@
 		78C402E81735EA52003372F9 /* SurveyAppProto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurveyAppProto-Prefix.pch"; sourceTree = "<group>"; };
 		78C402E91735EA52003372F9 /* SurveyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyAppDelegate.h; sourceTree = "<group>"; };
 		78C402EA1735EA52003372F9 /* SurveyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurveyAppDelegate.m; sourceTree = "<group>"; };
-		78C402F01735EA52003372F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		78C402F7173601F8003372F9 /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		78C402F8173601F8003372F9 /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
 		78C402FA173609EA003372F9 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
@@ -113,13 +113,13 @@
 		78C402E11735EA52003372F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				788A45E8175C438800234BF7 /* IconLaunch.png */,
 				788A45E0175C38CA00234BF7 /* Icon@2x.png */,
 				788A45DE175C38C200234BF7 /* Icon.png */,
 				78C402E21735EA52003372F9 /* SurveyAppProto-Info.plist */,
 				78C402E31735EA52003372F9 /* InfoPlist.strings */,
 				78C402E61735EA52003372F9 /* main.m */,
 				78C402E81735EA52003372F9 /* SurveyAppProto-Prefix.pch */,
-				78C402F01735EA52003372F9 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,9 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				78C402E51735EA52003372F9 /* InfoPlist.strings in Resources */,
-				78C402F11735EA52003372F9 /* Default-568h@2x.png in Resources */,
 				788A45DF175C38C200234BF7 /* Icon.png in Resources */,
 				788A45E1175C38CA00234BF7 /* Icon@2x.png in Resources */,
+				788A45E9175C438800234BF7 /* IconLaunch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

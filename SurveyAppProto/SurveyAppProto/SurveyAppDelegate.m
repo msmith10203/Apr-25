@@ -43,6 +43,8 @@
 	visited = [NSMutableArray arrayWithObject: firstController];
 	[self.window makeKeyAndVisible];
     
+    sleep(5);
+    
 	return YES;
 }
 
