@@ -54,12 +54,19 @@
                     nil
                 ],
                 [NSArray arrayWithObjects:
-                    @"I know our game plan is to win.",
+                    @"We are in agreement about specific goals to achieve our vision/mission",
                     @"Before the Merger",
                     @"After the Merger",
                     @"Add Comments",
                     nil
                 ],
+                [NSArray arrayWithObjects:
+                    @"Our planning process ensures that we worked on the right priorities.",
+                    @"Before the Merger",
+                    @"After the Merger",
+                    @"Add Comments",
+                    nil
+                 ],
              
              nil
         ];

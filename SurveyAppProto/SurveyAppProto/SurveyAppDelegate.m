@@ -21,15 +21,16 @@
 	// Override point for customization after application launch
     
     names = [NSArray arrayWithObjects:
-             @"Question 1",
-             @"Question 2",
-             @"Question 3",
-             @"Question 4",
+             @"Vision",
+             @"Planning",
+             @"Engagement",
+             @"Meetings",
+             @"Decision Making",
              nil];
 
     TableViewController *firstController =
     [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped
-                                 initWithTitle:@"Question 1"];
+                                 initWithTitle:@"Vision"];
 
     questionNumber = 0;
     

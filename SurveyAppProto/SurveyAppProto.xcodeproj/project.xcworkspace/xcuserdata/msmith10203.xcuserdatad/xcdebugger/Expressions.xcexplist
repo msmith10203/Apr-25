@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[TableViewController tableView:titleForHeaderInSection:]:TableViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -25,13 +28,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[TableViewController tableView:didSelectRowAtIndexPath:]:TableViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[headers objectAtIndex:r][s]">
+               value = "cell.textLabel.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
