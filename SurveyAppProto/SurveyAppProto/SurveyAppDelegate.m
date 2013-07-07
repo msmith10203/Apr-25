@@ -20,12 +20,18 @@
 {
 	// Override point for customization after application launch
     
+    
+    
     names = [NSArray arrayWithObjects:
              @"Vision",
              @"Planning",
              @"Engagement",
              @"Meetings",
              @"Decision Making",
+             @"Collaboration",
+             @"Customer Focus",
+             @"Customer Focus",
+             @"Learning",
              nil];
 
     TableViewController *firstController =

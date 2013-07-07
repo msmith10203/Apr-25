@@ -28,12 +28,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SurveyAppDelegate application:didFinishLaunchingWithOptions:]:SurveyAppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "m.s[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[TableViewController tableView:didSelectRowAtIndexPath:]:TableViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "cell.textLabel.text">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Model fetchedData:]:Model.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781AEB9A1788ED8C00CFE076 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 781AEB991788ED8C00CFE076 /* Model.m */; };
+		781AEB9C1789016D00CFE076 /* s array in Resources */ = {isa = PBXBuildFile; fileRef = 781AEB9B1789016D00CFE076 /* s array */; };
 		788680EE1739FEF30045C8CE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788680ED1739FEF30045C8CE /* TableViewController.m */; };
 		788A45DF175C38C200234BF7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 788A45DE175C38C200234BF7 /* Icon.png */; };
 		788A45E1175C38CA00234BF7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 788A45E0175C38CA00234BF7 /* Icon@2x.png */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781AEB981788ED8C00CFE076 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		781AEB991788ED8C00CFE076 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		781AEB9B1789016D00CFE076 /* s array */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s array"; sourceTree = "<group>"; };
 		788680EC1739FEF30045C8CE /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		788680ED1739FEF30045C8CE /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		788A45DE175C38C200234BF7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -99,6 +104,9 @@
 				78C402F8173601F8003372F9 /* SurveyViewController.m */,
 				78C402FA173609EA003372F9 /* InfoViewController.h */,
 				78C402FB173609EA003372F9 /* InfoViewController.m */,
+				781AEB981788ED8C00CFE076 /* Model.h */,
+				781AEB991788ED8C00CFE076 /* Model.m */,
+				781AEB9B1789016D00CFE076 /* s array */,
 				78C402E11735EA52003372F9 /* Supporting Files */,
 				78C402FD17360E2E003372F9 /* InfoView.h */,
 				78C402FE17360E2E003372F9 /* InfoView.m */,
@@ -180,6 +188,7 @@
 				788A45DF175C38C200234BF7 /* Icon.png in Resources */,
 				788A45E1175C38CA00234BF7 /* Icon@2x.png in Resources */,
 				788A45E9175C438800234BF7 /* IconLaunch.png in Resources */,
+				781AEB9C1789016D00CFE076 /* s array in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +206,7 @@
 				78C402FF17360E2E003372F9 /* InfoView.m in Sources */,
 				7890C91C1736943D00998D42 /* SurveyView.m in Sources */,
 				788680EE1739FEF30045C8CE /* TableViewController.m in Sources */,
+				781AEB9A1788ED8C00CFE076 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

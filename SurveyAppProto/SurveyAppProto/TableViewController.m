@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 #import "SurveyAppDelegate.h"
 #import "SurveyView.h"
+#import "Model.h"
 
 @interface TableViewController ()
 
@@ -23,90 +24,118 @@
         // Custom initialization
         //An array of five strings.
 
+        Model *m = [[Model alloc] init: @"https://www.corpmergers.com/Home/GetAnswerSet1"];
+
+//NSString *newString =
+        
 		headers =
             [NSArray arrayWithObjects:
                 [NSArray arrayWithObjects:
-                    @"Our vision/mission excites and motivates me to commit extra time and effort to the company.",
-                    @"Before the Merger",
-                    @"After the Merger",
-                    @"Add Comments",
-                    nil
-                 ],
-                [NSArray arrayWithObjects:
-                    @"I know what made us better or unique in our market.",
-                    @"Before the Merger",
-                    @"After the Merger",
-                    @"Add Comments",
-                    nil
-                 ],
-                [NSArray arrayWithObjects:
-                    @"I know how my job contributes to achieving our vision/mission.",
-                    @"Before the Merger",
-                    @"After the Merger",
-                    @"Add Comments",
+                    m.s[50],    // Our vision/mission excites and motivates me ...
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],      // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
                     nil
                 ],
                 [NSArray arrayWithObjects:
-                    @"I know our game plan is to win.",
-                    @"Before the Merger",
-                    @"After the Merger",
-                    @"Add Comments",
+                    m.s[51],   // I know what made us better or unique in our market.",
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
                     nil
                 ],
                 [NSArray arrayWithObjects:
-                    @"We are in agreement about specific goals to achieve our vision/mission",
-                    @"Before the Merger",
-                    @"After the Merger",
-                    @"Add Comments",
+                    m.s[52],    // I know how my job contributes ...
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
                     nil
                 ],
                 [NSArray arrayWithObjects:
-                    @"Our planning process ensures that we worked on the right priorities.",
-                    @"Before the Merger",
-                    @"After the Merger",
-                    @"Add Comments",
+                    m.s[53],    // I know our game plan is to ...,
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
+                    nil
+                ],
+                [NSArray arrayWithObjects:
+                    m.s[54],    // We are in agreement about specific goals...,
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
+                    nil
+                ],
+                [NSArray arrayWithObjects:
+                    m.s[55],    // Our planning process ensures ...
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
+                    nil
+                ],
+                [NSArray arrayWithObjects:
+                    m.s[56],    // I am treated with respect ...
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
+                    nil
+                ],
+                [NSArray arrayWithObjects:
+                    m.s[57],    // Our organization is guided by clear ...
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
+                    nil
+                ],
+                [NSArray arrayWithObjects:
+                    m.s[58],    // We have fun at work
+                    [[m.s[95] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // before
+                    [[m.s[96] stringByAppendingString: @" " ]
+                        stringByAppendingString: m.s[97]],        // after
                     nil
                  ],
-             
              nil
         ];
 
-        SurveyView *sv = [[SurveyView alloc] init];
+//        SurveyView *sv = [[SurveyView alloc] init];
         
 		//An array of five arrays (Miyamoto Musashi).
 		states =
             [NSArray arrayWithObjects:
-                  //question
-                //CST: Central Standard Time
-                [NSArray arrayWithObjects:
-                 //@"Strongly Disagree",
-                 //@"Disagree",
-                 //@"Neutral",
-                 //@"Agree",
-                 //@"Strongly Agree",
-                 nil
-                 ],
+             //question
+             [NSArray arrayWithObjects:
+                nil
+              ],
              
-                //CST: Central Standard Time
-                [NSArray arrayWithObjects:
-                 @"Strongly Disagree",
-                 @"Disagree",
-                 @"Neutral",
-                 @"Agree",
-                 @"Strongly Agree",
-                 nil
-                 ],
+             // before
+             [NSArray arrayWithObjects:
+                m.s[0],    //@"Strongly Disagree",
+                m.s[1],    //@"Disagree",
+                m.s[2],    //@"Neutral",
+                m.s[3],    //@"Agree",
+                m.s[4],    //@"Strongly Agree",
+                nil
+              ],
              
-                  //CST: Central Standard Time
-                  [NSArray arrayWithObjects:
-                   @"Strongly Disagree",
-                   @"Disagree",
-                   @"Neutral",
-                   @"Agree",
-                   @"Strongly Agree",
-                   nil
-                   ],
+             //after
+             [NSArray arrayWithObjects:
+                m.s[0],    //@"Strongly Disagree",
+                m.s[1],    //@"Disagree",
+                m.s[2],    //@"Neutral",
+                m.s[3],    //@"Agree",
+                m.s[4],    //@"Strongly Agree",
+                nil
+              ],
              
+/*
                   //MST: Mountain Standard Time
                   [NSArray arrayWithObjects:
                    @"Enter Additional Comments Here",
@@ -127,7 +156,7 @@
                  //@"Strongly Agree",
                  nil
                  ],
-             
+*/
              nil
              ];
         
