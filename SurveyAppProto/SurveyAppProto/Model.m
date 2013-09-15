@@ -12,7 +12,7 @@
 @synthesize s;
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
-#define kLatestKivaLoansURL [NSURL URLWithString: @"https://www.corpmergers.com/Home/GetAnswerSet1"] //2
+//#define kLatestKivaLoansURL [NSURL URLWithString: @"https://www.corpmergers.com/Home/GetAnswerSet1"] //2
 
 -(id) init: (NSString *) urlStr {
     self = [super init];
@@ -36,8 +36,6 @@
                           error:&error];
     
     if ([json isKindOfClass:[NSArray class]]) {
-//        NSLog(@"its an array!");
-//        NSArray *jsonArray = (NSArray *)json;
         s = (NSArray *)json;
         NSLog(@"jsonArray - %@",s);
     }

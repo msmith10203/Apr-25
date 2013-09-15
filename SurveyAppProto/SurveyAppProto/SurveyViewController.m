@@ -8,7 +8,6 @@
 
 #import "SurveyViewController.h"
 #import "SurveyAppDelegate.h"
-#import "SurveyView.h"
 #import "InfoViewController.h"
 #import "TableViewController.h"
 
@@ -45,22 +44,6 @@
     return self;
 }
 
-/*
--(void) moreInfo {
-    SurveyAppDelegate *applicationDelegate = [UIApplication sharedApplication].delegate;
-    
-    NSString *information = [applicationDelegate.information objectForKey:self.title];
-    
-    TableViewController *infoController = [[TableViewController alloc] initWithStyle: UITableViewStyleGrouped];
-
-    UINavigationController *navigationController =
-    [[UINavigationController alloc] initWithRootViewController:infoController];
-
- 
-    [self presentModalViewController:navigationController animated:YES];
-}
-*/
- 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -73,11 +56,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (void) loadView{
     CGRect frame = [UIScreen mainScreen].applicationFrame;
     self.view = [[SurveyView alloc] initWithFrame: frame controller: self];
     
 }
+*/
 
 -(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) toInterfaceOrientation{
     

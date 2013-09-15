@@ -3,9 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[TableViewController tableView:titleForHeaderInSection:]:TableViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -13,17 +10,6 @@
             </PersistentString>
             <PersistentString
                value = "block[0]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[TableViewController initWithStyle:initWithTitle:]:TableViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "title">
-            </PersistentString>
-            <PersistentString
-               value = "[applicationDelegate.names indexOfObject: title]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -44,7 +30,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[TableViewController tableView:cellForRowAtIndexPath:]:TableViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[Model fetchedData:]:Model.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SurveyAppDelegate nextStation]:SurveyAppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController.viewControllers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TableViewController initWithStyle:initWithTitle:]:TableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "title">
+            </PersistentString>
+            <PersistentString
+               value = "[applicationDelegate.names indexOfObject: title]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

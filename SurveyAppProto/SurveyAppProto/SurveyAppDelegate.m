@@ -7,7 +7,6 @@
 //
 
 #import "SurveyAppDelegate.h"
-#import "SurveyViewController.h"
 #import "TableViewController.h"
 
 @implementation SurveyAppDelegate
@@ -18,9 +17,6 @@
 
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions
 {
-	// Override point for customization after application launch
-    
-    
     
     names = [NSArray arrayWithObjects:
              @"Vision",

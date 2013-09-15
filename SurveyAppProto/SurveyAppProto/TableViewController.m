@@ -8,7 +8,6 @@
 
 #import "TableViewController.h"
 #import "SurveyAppDelegate.h"
-#import "SurveyView.h"
 #import "Model.h"
 
 @interface TableViewController ()
@@ -21,12 +20,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
-        //An array of five strings.
 
         Model *m = [[Model alloc] init: @"https://www.corpmergers.com/Home/GetAnswerSet1"];
-
-//NSString *newString =
         
 		headers =
             [NSArray arrayWithObjects:
@@ -105,9 +100,6 @@
              nil
         ];
 
-//        SurveyView *sv = [[SurveyView alloc] init];
-        
-		//An array of five arrays (Miyamoto Musashi).
 		states =
             [NSArray arrayWithObjects:
              //question
@@ -134,29 +126,6 @@
                 m.s[4],    //@"Strongly Agree",
                 nil
               ],
-             
-/*
-                  //MST: Mountain Standard Time
-                  [NSArray arrayWithObjects:
-                   @"Enter Additional Comments Here",
-                   //@"Strongly Disagree",
-                   //@"Disagree",
-                   //@"Neutral",
-                   //@"Agree",
-                   //@"Strongly Agree",
-                   nil
-                   ],
-                  
-                //MST: Mountain Standard Time
-                [NSArray arrayWithObjects:
-                 //@"Strongly Disagree",
-                 //@"Disagree",
-                 //@"Neutral",
-                 //@"Agree",
-                 //@"Strongly Agree",
-                 nil
-                 ],
-*/
              nil
              ];
         
@@ -267,68 +236,20 @@
     NSArray *block = [headers objectAtIndex: applicationDelegate.questionNumber];
     NSString *sectionText = [block objectAtIndex: section];
     return sectionText;
-/*
-    NSArray *block = [headers objectAtIndex: section];    
-    SurveyAppDelegate *applicationDelegate = [UIApplication sharedApplication].delegate;
-	NSString *sectionText = [block objectAtIndex: applicationDelegate.questionNumber];
-    applicationDelegate.questionNumber++;
-	return sectionText;
-*/
-    
-//	return [headers objectAtIndex: section];
+
 }
-
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL) tableView: (UITableView *) tableView canEditRowAtIndexPath: (NSIndexPath *) indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void) tableView: (UITableView *) tableView commitEditingStyle: (UITableViewCellEditingStyle) editingStyle forRowAtIndexPath: (NSIndexPath *) indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths: [NSArray arrayWithObject: indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void) tableView: (UITableView *) tableView moveRowAtIndexPath: (NSIndexPath *) fromIndexPath toIndexPath:(NSIndexPath *) toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL) tableView: (UITableView *) tableView canMoveRowAtIndexPath: (NSIndexPath *) indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Table view delegate
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath
 {
-    
+/*
     int r = [indexPath row];
     int s = [indexPath section];
 
     UITableViewCell *cell = [tableView cellForRowAtIndexPath: indexPath];
-    
-       if ([[headers objectAtIndex: r][s] isEqualToString:@"Add Comments"]) {
+
+    if ([[headers objectAtIndex: r][s] isEqualToString:@"Add Comments"]) {
         selected = indexPath;
         
         //Add a UITextField to the selected cell.
@@ -368,7 +289,7 @@
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
     }
+*/
 }
-
 
 @end
